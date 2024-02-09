@@ -56,10 +56,16 @@ nav ul li .dropdown-content {
 }
 nav ul li .dropdown-content ul {
   display: flex;
-  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
   flex-direction: column;
   list-style: none;
   color: #fff;
+}
+nav ul li .dropdown-content ul li {
+  transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav ul li .dropdown-content ul li:hover {
+  background-color: #ffffff;
+  color: #1a191f;
 }
 nav ul a {
   transition: 0.3s;

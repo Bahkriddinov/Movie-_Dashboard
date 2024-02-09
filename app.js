@@ -1,2 +1,9 @@
-const dropdown = document.querySelectorAll('.dropdown')
-const dropdownCont = document.querySelectorAll('.dropdown-content');
+const dropdowns = document.querySelectorAll('.dropdown');
+const dropdownContents = document.querySelectorAll('.dropdown-content');
+
+dropdowns.forEach((dropdown, index) => {
+    dropdown.addEventListener('click', () => {
+        const dropdownCont = dropdownContents[index];
+        dropdownCont.style.display = (dropdownCont.style.display === 'block') ? 'none' : 'block';
+    });
+});
