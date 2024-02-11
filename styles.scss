@@ -18,8 +18,17 @@ body{
 nav{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: var(--drk-clr);
+    .toggle-icon{
+        display: none;
+        i{
+            line-height: 70px;
+            font-size: 30px;
+            color: #fff;
+            margin-left: 25px;
+        }
+    }
     #logo-section{
         font-size: 30px;
         line-height: 70px;
@@ -28,6 +37,8 @@ nav{
             color: var(--org-color);
         }
     }
+.dff-nav{
+    display: flex;
     ul{
         display: flex;
         line-height: 70px;
@@ -104,8 +115,12 @@ nav{
             backdrop-filter: blur(10px);
             border: none;
             color: #fff;
-        }
+            margin-right: 25px;
     }
+   
+}   
+
+
     #btn{
         line-height: 70px;
         color: #fff;
@@ -114,3 +129,23 @@ nav{
         border-radius: 5px;
         border: 1px solid var(--org-color);
     }
+}
+@media screen and (max-width: 1180px) {
+    nav{
+        .toggle-icon{
+            display: block;
+        }
+        .bx-search{
+            color: #fff;
+            line-height: 70px;
+            font-size: 25px;
+            padding: 0 25px;
+        }
+        input{
+            display: none;
+        }
+        #links{
+            display: none;
+        }
+    }
+}

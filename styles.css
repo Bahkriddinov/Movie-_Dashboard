@@ -26,8 +26,17 @@ body {
 nav {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: var(--drk-clr);
+}
+nav .toggle-icon {
+  display: none;
+}
+nav .toggle-icon i {
+  line-height: 70px;
+  font-size: 30px;
+  color: #fff;
+  margin-left: 25px;
 }
 nav #logo-section {
   font-size: 30px;
@@ -37,16 +46,19 @@ nav #logo-section {
 nav #logo-section span {
   color: var(--org-color);
 }
-nav ul {
+nav .dff-nav {
+  display: flex;
+}
+nav .dff-nav ul {
   display: flex;
   line-height: 70px;
   list-style: none;
 }
-nav ul li {
+nav .dff-nav ul li {
   padding: 0 25px;
   z-index: 1;
 }
-nav ul li .dropdown-content {
+nav .dff-nav ul li .dropdown-content {
   z-index: 2;
   display: none;
   position: absolute;
@@ -54,34 +66,33 @@ nav ul li .dropdown-content {
   min-width: 160px;
   z-index: 1;
 }
-nav ul li .dropdown-content ul {
+nav .dff-nav ul li .dropdown-content ul {
   display: flex;
   flex-direction: column;
   list-style: none;
   color: #fff;
 }
-nav ul li .dropdown-content ul li {
+nav .dff-nav ul li .dropdown-content ul li {
   transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-nav ul li .dropdown-content ul li:hover {
+nav .dff-nav ul li .dropdown-content ul li:hover {
   background-color: #ffffff;
   color: #1a191f;
 }
-nav ul a {
+nav .dff-nav ul a {
   transition: 0.3s;
   display: block;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
 }
-nav ul a:hover {
+nav .dff-nav ul a:hover {
   color: var(--org-color);
 }
-
-#othr-info {
+nav #othr-info {
   line-height: 70px;
 }
-#othr-info input {
+nav #othr-info input {
   padding: 10px;
   font-size: 17px;
   width: 200px;
@@ -93,17 +104,17 @@ nav ul a:hover {
           backdrop-filter: blur(10px);
   outline: none;
 }
-#othr-info ::-moz-placeholder {
+nav #othr-info ::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6235294118);
 }
-#othr-info ::placeholder {
+nav #othr-info ::placeholder {
   color: rgba(255, 255, 255, 0.6235294118);
 }
-#othr-info input:focus {
+nav #othr-info input:focus {
   border: 1px solid #f9ab00;
   border-radius: 3px;
 }
-#othr-info select {
+nav #othr-info select {
   padding: 10px;
   font-size: 17px;
   text-transform: uppercase;
@@ -112,13 +123,31 @@ nav ul a:hover {
           backdrop-filter: blur(10px);
   border: none;
   color: #fff;
+  margin-right: 25px;
 }
-
-#btn {
+nav #btn {
   line-height: 70px;
   color: #fff;
   padding: 10px 25px;
   text-decoration: none;
   border-radius: 5px;
   border: 1px solid var(--org-color);
+}
+
+@media screen and (max-width: 1180px) {
+  nav .toggle-icon {
+    display: block;
+  }
+  nav .bx-search {
+    color: #fff;
+    line-height: 70px;
+    font-size: 25px;
+    padding: 0 25px;
+  }
+  nav input {
+    display: none;
+  }
+  nav #links {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
