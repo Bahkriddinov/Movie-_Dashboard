@@ -134,6 +134,59 @@ nav #btn {
   border: 1px solid var(--org-color);
 }
 
+.nav-ver {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 25, 31, 0.1921568627);
+  -webkit-backdrop-filter: 15px;
+          backdrop-filter: 15px;
+}
+.nav-ver ul#links {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  list-style: none;
+  background-color: rgba(26, 25, 31, 0.7058823529);
+  -webkit-backdrop-filter: 15px;
+          backdrop-filter: 15px;
+}
+.nav-ver ul#links li {
+  padding: 25px;
+  font-size: 17px;
+}
+.nav-ver ul#links li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-ver ul#links li .dropdown-content {
+  display: none;
+  z-index: 3;
+  background-color: rgba(22, 21, 26, 0.9254901961);
+  border-radius: 5px;
+  padding: 15px;
+  color: #fff;
+}
+.nav-ver ul#links li .dropdown-content ul {
+  list-style: none;
+}
+.nav-ver ul#links li .dropdown-content ul li {
+  padding: 10px 15px;
+}
+.nav-ver ul#links li .dropdown-content ul li:hover {
+  background-color: rgba(255, 255, 255, 0.6235294118);
+  border: 1px solid #fff;
+}
+.nav-ver ul#links li:hover {
+  background-color: rgba(255, 255, 255, 0.3843137255);
+  border: 1px solid #fff;
+}
+
 @media screen and (max-width: 1180px) {
   nav .toggle-icon {
     display: block;
